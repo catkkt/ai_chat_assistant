@@ -1,0 +1,9 @@
+D:\idea\ai_chat_client\src\main\java\com\ai\ai_chat_client\AiChatClientApplication.java
+D:\idea\ai_chat_client\src\main\java\com\ai\ai_chat_client\config\AiConfig.java
+D:\idea\ai_chat_client\src\main\java\com\ai\ai_chat_client\config\CorsConfig.java
+D:\idea\ai_chat_client\src\main\java\com\ai\ai_chat_client\controller\ChatController.java
+D:\idea\ai_chat_client\src\main\java\com\ai\ai_chat_client\entity\Case.java
+D:\idea\ai_chat_client\src\main\java\com\ai\ai_chat_client\entity\SourceSnippet.java
+D:\idea\ai_chat_client\src\main\java\com\ai\ai_chat_client\loader\KbLoader.java
+D:\idea\ai_chat_client\src\main\java\com\ai\ai_chat_client\service\RagService.java
+D:\idea\ai_chat_client\src\main\java\com\ai\ai_chat_client\util\RagEval.java

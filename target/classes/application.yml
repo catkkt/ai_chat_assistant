@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/spring-ai-rag
+    username: postgres
+    password: postgres
+  ai:
+    ollama:
+      api-key: ollama
+      base-url: http://localhost:11434
+      chat:
+        model: qwen3:0.6b
+        temperature: 0.2
+      embedding:
+        model: bge-m3
+    vectorstore:
+      pgvector:
+        initialize-schema: true
+        index-type: hnsw
+        distance-type: cosine_distance
+        dimensions: 1024
+    chat:
+      memory:
+        repository:
+          jdbc:
+            initialize-schema: always  # 首次启动建 spring_ai_chat_memory 表
+
+app:
+  kb:
+    location: classpath:/kb/*.md
+  rag:
+#    每次提问检索召回前 4 个最相关片段喂给模型
+    top-k: 4
+#    相似度低于 0.45 的片段直接丢弃
+    similarity-threshold: 0.45
+
+logging:
+  level:
+    com.ai.ai_chat_client: DEBUG            # 你自己代码的日志
+    org.springframework.ai: DEBUG           # Spring AI 总开关:请求/响应/检索都打
+    org.springframework.ai.ollama: DEBUG    # Ollama 调用细节(请求体、耗时)
+    org.springframework.ai.vectorstore: DEBUG  # 向量检索:能看到 similarity search 命中的片段
+    org.springframework.jdbc.core: DEBUG    # pgvector 的 SQL(注意:不含参数值)

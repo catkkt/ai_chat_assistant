@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>智聊 AI · 知识库问答</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside id="eval-panel" class="eval-panel">
+    <div class="eval-head">
+      <span class="eval-title">🧪 黄金集自测</span>
+      <button id="eval-run" type="button">运行</button>
+    </div>
+    <div id="eval-summary" class="eval-summary">尚未运行评测，点击「运行」对 10 条黄金集自动打分</div>
+    <div id="eval-detail" class="eval-detail"></div>
+  </aside>
+
+  <div class="app">
+    <header class="header">
+      <div class="title">智聊 AI 客服</div>
+      <div class="subtitle">基于 Spring AI 2.0 + pgvector 的 RAG 问答</div>
+    </header>
+
+    <main id="messages" class="messages">
+      <div class="welcome">
+        你好，我是智聊 AI 客服助手。你可以问我产品介绍、退款政策、会员计费、账号安全等关于「智聊 AI」的问题。
+      </div>
+    </main>
+
+    <footer class="input-bar">
+      <textarea id="input" rows="1" placeholder="输入你的问题，例如：你们支持退款吗？（Enter 发送 / Shift+Enter 换行）"></textarea>
+      <button id="send">发送</button>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+com\ai\ai_chat_client\util\RagEval.class
+com\ai\ai_chat_client\util\RagEval$EvalCaseResult.class
+com\ai\ai_chat_client\config\CorsConfig.class
+com\ai\ai_chat_client\entity\Case.class
+com\ai\ai_chat_client\util\RagEval$EvalReport.class
+com\ai\ai_chat_client\util\RagEval$Case.class
